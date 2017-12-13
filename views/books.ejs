@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/stylesheets/books.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <title>读书</title>
+</head>
+<body>
+    <%- include("header",{username:username})%>
+    <div class="wrapper">
+            <div class="container">
+                <div class="inner">
+                    <ul class="list">
+                            <% result.forEach((item,index)=>{ %>
+                                <li >
+                                    <div data-id="<%- item.id%>">
+                                        <img src="<%- item.image%>" alt="">
+                                        <h3>《<%- item.title%>》</h3>
+                                        <h5>评分:<%- item.rating.average%></h5>
+                                        <h5>作者:<%- item.author%></h5>  
+                                        <h5>价钱:<%- item.price%> 元</h5>
+                                        <button onclick="window.location.href='/detail?id=<%- item.id%>' ">查看详情</button>
+                                    </div>
+                                </li>
+                            <%})%>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- <img src="/images/footer02.png" alt="" id="skirt"> -->
+            <%- include("footer")%>
+    </div>
+
+
+
+
+
+
+
+    <script src="/javascripts/jquery-1.10.1.js"></script>
+    <script src="/layui/layui.js"></script>
+    <script>
+        layui.use('element', function(){
+            var element = layui.element;
+        });
+    </script>
+</body>
+</html>

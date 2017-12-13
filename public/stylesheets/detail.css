@@ -1,0 +1,11 @@
+#nav{background-color: #e93854;}
+.layui-nav-bar{background-color: white;}
+.layui-this{background-color:#e93854!important;color:white!important;}
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{background-color:#fff!important;color:#e93854!important;}
+.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this{background: #e93854;}
+
+body,.wrappr{background: white!important;}
+.container{background: white!important;width:1200px;margin:0 auto; }
+
+.banner{width: 100%;height: 300px;}
+.banner>img{width: 100%;height: 100%;}
